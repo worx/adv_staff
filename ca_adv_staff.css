@@ -1,0 +1,29 @@
+/* Staff Category List */
+.ca-adv-staff-category-list .views-field-field-ca-adv-staff-c-photo,
+.ca-adv-staff-category-list .view h2 {text-align: center;}
+
+/* Staff Member List */
+.ca-adv-staff-member-list .views-field-field-ca-adv-staff-m-photo,
+.ca-adv-staff-member-list .view h2,
+.ca-adv-staff-member-list .view h3 {text-align: center; margin: 0;}
+
+.ca-adv-staff-member-list-3 .views-field-field-ca-adv-staff-m-photo {float: left; margin: 0 15px 5px 0;}
+
+.ca-adv-staff-member-list-3 .views-field-field-ca-adv-staff-m-photo,
+.ca-adv-staff-member-list-3 .view h2,
+.ca-adv-staff-member-list-3 .view h3 {text-align: left;}
+.ca-adv-staff-member-list-3 .views-field-view-node {text-align: right;}
+.ca-adv-staff-member-list-3 .views-field-nothing {clear: both;}
+
+.ca-adv-staff-member-list-4 .views-field-field-ca-adv-staff-m-photo {float: left; margin: 0 15px 5px 0;}
+
+.ca-adv-staff-member-list-4 .views-field-field-ca-adv-staff-m-photo,
+.ca-adv-staff-member-list-4 .view h2,
+.ca-adv-staff-member-list-4 .view h3 {text-align: left;}
+.ca-adv-staff-member-list-4 .views-field-view-node {text-align: right;}
+.ca-adv-staff-member-list-4 .views-field-nothing {clear: both;}
+
+/* Staff Member Node */
+.ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-1,
+.ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-2 {float: left; margin: 0 15px 5px 0;}
+.ca-adv-staff-member-node .view h3 {text-align: center; margin: 0; max-width: 200px;}
