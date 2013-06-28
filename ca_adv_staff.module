@@ -46,7 +46,11 @@ function ca_adv_staff_menu_alter(&$items) {
  */
 function ca_adv_staff_panels_pre_render($panel, $renderer) {
   foreach ($panel->content as $key => $value) {
-    if ($value->subtype == 'ca_adv_staff_list-ca_adv_staff_list_1') {
+    if ($value->subtype == 'ca-adv-staff-category-list-1') {
+      $panel->title = variable_get('ca_adv_staff_panel_title', 'Staff');
+    } elseif ($value->subtype == 'ca-adv-staff-category-list-2') {
+      $panel->title = variable_get('ca_adv_staff_panel_title', 'Staff');
+    } elseif ($value->subtype == 'ca-adv-staff-category-list-3') {
       $panel->title = variable_get('ca_adv_staff_panel_title', 'Staff');
     }
   }
