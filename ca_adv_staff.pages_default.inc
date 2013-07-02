@@ -726,7 +726,7 @@ function ca_adv_staff_default_page_manager_pages() {
       'type' => 'tab',
       'title' => 'Administration',
       'name' => 'navigation',
-      'weight' => '0',
+      'weight' => '5',
     ),
   );
   $page->arguments = array(
