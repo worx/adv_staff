@@ -311,6 +311,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['field'] = 'field_ca_adv_staff_c_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['settings'] = array(
     'image_style' => 'crop_default_square',
@@ -366,6 +368,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['field'] = 'field_ca_adv_staff_c_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['settings'] = array(
     'image_style' => 'crop_default_portrait',
@@ -394,6 +398,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['field'] = 'field_ca_adv_staff_c_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['settings'] = array(
     'image_style' => 'crop_default_landscape',
@@ -440,6 +446,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_medium_square',
@@ -489,6 +497,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_medium_portrait',
@@ -561,6 +571,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['field'] = 'field_ca_adv_staff_c_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_c_photo']['settings'] = array(
     'image_style' => 'default_thumbnail',
@@ -642,6 +654,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'default_thumbnail',
@@ -711,6 +725,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_default_square',
@@ -782,6 +798,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_default_portrait',
@@ -829,6 +847,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_default_square',
@@ -899,6 +919,8 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
     'image_style' => 'crop_default_portrait',
