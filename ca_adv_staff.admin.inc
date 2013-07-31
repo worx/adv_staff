@@ -45,6 +45,7 @@ function ca_adv_staff_settings_form() {
       'ca_adv_staff_c_list_template_one' => t('Template one'),
       'ca_adv_staff_c_list_template_two' => t('Template two'),
       'ca_adv_staff_c_list_template_three' => t('Template three'),
+      'ca_adv_staff_c_list_template_four' => t('Template four'),
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_adv_staff_c_list_template', 'ca_adv_staff_c_list_template_one'),

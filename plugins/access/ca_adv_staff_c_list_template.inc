@@ -29,6 +29,7 @@ function ca_adv_staff_c_list_template_access_settings($form, &$form_state, $conf
       'ca_adv_staff_c_list_template_one' => t('Template one'),
       'ca_adv_staff_c_list_template_two' => t('Template two'),
       'ca_adv_staff_c_list_template_three' => t('Template three'),
+      'ca_adv_staff_c_list_template_four' => t('Template four'),
     ),
     '#required' => TRUE,
     '#default_value' => $conf['ca_adv_staff_c_list_template'],
@@ -60,8 +61,11 @@ function ca_adv_staff_c_list_template_access_summary($conf, $context) {
   elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_two') {
     $template = t('Template two');
   }
-  else {
+  elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_three') {
     $template = t('Template three');
+  }
+  else {
+    $template = t('Template four');
   }
 
   return t('Display template is set to: ' . $template);

@@ -23,6 +23,13 @@
 .ca-adv-staff-member-list-4 .views-field-view-node {text-align: right;}
 .ca-adv-staff-member-list-4 .views-field-nothing {clear: both;}
 
+/* Staff Grouped Member List */
+.ca-adv-staff-category-list-4 td {display: block; float: left; width: 33%;}
+.ca-adv-staff-category-list-4 .views-field-field-ca-adv-staff-m-photo {text-align: center;}
+.ca-adv-staff-category-list-4 .view h4 {margin-bottom: 10px; text-align: center;}
+.ca-adv-staff-category-list-4 .view h5 {margin-bottom: 0; text-align: center;}
+.ca-adv-staff-category-list-4 .view-ca-adv-staff-category-list h3 {font-size: 1.3em; margin-bottom: 10px;}
+
 /* Staff Member Node */
 .ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-1,
 .ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-2 {float: left; margin: 0 15px 5px 0;}

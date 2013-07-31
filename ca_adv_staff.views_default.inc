@@ -424,6 +424,32 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Adv Staff: Category List View Template Three';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Adv Staff: Category Menu List View */
+  $handler = $view->new_display('panel_pane', 'CA Adv Staff: Category Menu List View', 'ca_adv_staff_cat_menu_list');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Adv Staff: Category Menu List View';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_adv_staff_category_list'] = $view;
 
   $view = new view();
@@ -712,6 +738,7 @@ function ca_adv_staff_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -794,6 +821,24 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'adv_staff_member' => 'adv_staff_member',
   );
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    13007701 => 0,
+    135943149 => 0,
+  );
 
   /* Display: CA Adv Staff: Member List View Template One */
   $handler = $view->new_display('panel_pane', 'CA Adv Staff: Member List View Template One', 'staff_member_list_1');
@@ -801,6 +846,7 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Adv Staff: Member List View Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Adv Staff: Member List View Template Two */
   $handler = $view->new_display('panel_pane', 'CA Adv Staff: Member List View Template Two', 'staff_member_list_2');
@@ -838,6 +884,7 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Adv Staff: Member List View Template Two';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Adv Staff: Member List View Template Three */
   $handler = $view->new_display('panel_pane', 'CA Adv Staff: Member List View Template Three', 'staff_member_list_3');
@@ -910,6 +957,7 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Adv Staff: Member List View Template Three';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Adv Staff: Member List View Template Four */
   $handler = $view->new_display('panel_pane', 'CA Adv Staff: Member List View Template Four', 'staff_member_list_4');
@@ -982,6 +1030,94 @@ function ca_adv_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Adv Staff: Member List View Template Four';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Adv Staff: Grouped Member List View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Staff: Grouped Member List View Template One', 'staff_grouped_member_list_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Adv Staff Category (field_ca_adv_staff_m_category) */
+  $handler->display->display_options['relationships']['field_ca_adv_staff_m_category_nid']['id'] = 'field_ca_adv_staff_m_category_nid';
+  $handler->display->display_options['relationships']['field_ca_adv_staff_m_category_nid']['table'] = 'field_data_field_ca_adv_staff_m_category';
+  $handler->display->display_options['relationships']['field_ca_adv_staff_m_category_nid']['field'] = 'field_ca_adv_staff_m_category_nid';
+  $handler->display->display_options['relationships']['field_ca_adv_staff_m_category_nid']['delta'] = '-1';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['relationship'] = 'field_ca_adv_staff_m_category_nid';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Photo */
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['id'] = 'field_ca_adv_staff_m_photo';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['table'] = 'field_data_field_ca_adv_staff_m_photo';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['field'] = 'field_ca_adv_staff_m_photo';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_photo']['settings'] = array(
+    'image_style' => 'crop_default_square',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['id'] = 'field_ca_adv_staff_m_title';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['table'] = 'field_data_field_ca_adv_staff_m_title';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['field'] = 'field_ca_adv_staff_m_title';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['element_type'] = 'h5';
+  $handler->display->display_options['fields']['field_ca_adv_staff_m_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+  $handler->display->display_options['sorts']['weight_1']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_1']['relationship'] = 'field_ca_adv_staff_m_category_nid';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created_1']['id'] = 'created_1';
+  $handler->display->display_options['sorts']['created_1']['table'] = 'node';
+  $handler->display->display_options['sorts']['created_1']['field'] = 'created';
+  $handler->display->display_options['sorts']['created_1']['relationship'] = 'field_ca_adv_staff_m_category_nid';
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Adv Staff: Grouped Member List View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['ca_adv_staff_staff_list'] = $view;
 
   return $export;
