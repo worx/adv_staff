@@ -24,7 +24,7 @@
 .ca-adv-staff-member-list-4 .views-field-nothing {clear: both;}
 
 /* Staff Grouped Member List */
-.ca-adv-staff-category-list-4 td {display: block; float: left; width: 33%;}
+.ca-adv-staff-category-list-4 td {display: block; float: left; padding: 0; width: 33%;}
 .ca-adv-staff-category-list-4 .views-field-field-ca-adv-staff-m-photo {text-align: center;}
 .ca-adv-staff-category-list-4 .view h4 {margin-bottom: 10px; text-align: center;}
 .ca-adv-staff-category-list-4 .view h5 {margin-bottom: 0; text-align: center;}
