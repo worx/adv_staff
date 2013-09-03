@@ -80,7 +80,7 @@ function ca_adv_staff_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ca_adv_staff_c_photo',
     'label' => 'Photo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -191,7 +191,7 @@ function ca_adv_staff_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ca_adv_staff_m_category',
     'label' => 'Adv Staff Category',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -234,7 +234,7 @@ function ca_adv_staff_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ca_adv_staff_m_photo',
     'label' => 'Photo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
