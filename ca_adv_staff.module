@@ -11,7 +11,7 @@ include_once 'ca_adv_staff.features.inc';
  */
 function ca_adv_staff_menu() {
   $items['admin/config/worx_features/adv-staff'] = array(
-    'title' => 'Staff Configuration',
+    'title' => 'Adv Staff Configuration',
     'description' => 'Override settings for ca_adv_staff',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('ca_adv_staff_settings_form'),
@@ -60,11 +60,23 @@ function ca_adv_staff_panels_pre_render($panel, $renderer) {
  * Implements hook_views_pre_render().
  */
 function ca_adv_staff_views_pre_view(&$view, &$display_id, &$args) {
-  if ($display_id == 'ca_adv_staff_list_1') {
-    $view->set_items_per_page(variable_get('ca_adv_staff_list_count', 5));
+  if ($display_id == 'ca_adv_staff_cat_list_1') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_cat_list_count', 12));
+  } elseif ($display_id == 'ca_adv_staff_cat_list_2') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_cat_list_count', 12));
+  } elseif ($display_id == 'ca_adv_staff_cat_list_3') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_cat_list_count', 12));
   }
-  elseif ($display_id == 'ca_adv_staff_block_1') {
-    $view->set_items_per_page(variable_get('ca_adv_staff_block_count', 1));
+  if ($display_id == 'staff_member_list_1') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_staff_grid_count', 12));
+  } elseif ($display_id == 'staff_member_list_2') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_staff_grid_count', 12));
+  } elseif ($display_id == 'staff_member_list_3') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_staff_list_count', 5));
+  } elseif ($display_id == 'staff_member_list_4') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_staff_list_count', 5));
+  } elseif ($display_id == 'staff_grouped_member_list_1') {
+    $view->set_items_per_page(variable_get('ca_adv_staff_staff_grid_count', 12));
   }
 }
 

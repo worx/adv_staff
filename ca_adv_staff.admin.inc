@@ -31,12 +31,26 @@ function ca_adv_staff_settings_form() {
     '#required' => TRUE,
     '#description' => t('What would you like the menu title to be?'),
   );
-  $form['ca_adv_staff_list_count'] = array(
+  $form['ca_adv_staff_cat_list_count'] = array(
     '#type' => 'textfield',
-    '#title' => t('Staffs per page'),
-    '#default_value' => variable_get('ca_adv_staff_list_count', 12),
+    '#title' => t('Categories per page'),
+    '#default_value' => variable_get('ca_adv_staff_cat_list_count', 12),
     '#required' => TRUE,
-    '#description' => t('How many adv staffs would you like displayed per page?'),
+    '#description' => t('How many categories would you like displayed per page? Suggested in groups for 3.'),
+  );
+  $form['ca_adv_staff_staff_grid_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Staffers per grid page'),
+    '#default_value' => variable_get('ca_adv_staff_staff_grid_count', 12),
+    '#required' => TRUE,
+    '#description' => t('How many staffers would you like displayed per grid page? Suggested in groups for 3. (Template one & Template two)'),
+  );
+  $form['ca_adv_staff_staff_list_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Staffers per list page'),
+    '#default_value' => variable_get('ca_adv_staff_staff_list_count', 5),
+    '#required' => TRUE,
+    '#description' => t('How many staffers would you like displayed per list page? (Template three & Template four)'),
   );
   $form['ca_adv_staff_c_list_template'] = array(
     '#type' => 'select',
