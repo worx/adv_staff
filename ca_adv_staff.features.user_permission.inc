@@ -10,7 +10,7 @@
 function ca_adv_staff_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create adv_staff_categories content.
+  // Exported permission: 'create adv_staff_categories content'.
   $permissions['create adv_staff_categories content'] = array(
     'name' => 'create adv_staff_categories content',
     'roles' => array(
@@ -21,7 +21,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create adv_staff_member content.
+  // Exported permission: 'create adv_staff_member content'.
   $permissions['create adv_staff_member content'] = array(
     'name' => 'create adv_staff_member content',
     'roles' => array(
@@ -32,7 +32,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any adv_staff_categories content.
+  // Exported permission: 'delete any adv_staff_categories content'.
   $permissions['delete any adv_staff_categories content'] = array(
     'name' => 'delete any adv_staff_categories content',
     'roles' => array(
@@ -43,7 +43,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any adv_staff_member content.
+  // Exported permission: 'delete any adv_staff_member content'.
   $permissions['delete any adv_staff_member content'] = array(
     'name' => 'delete any adv_staff_member content',
     'roles' => array(
@@ -53,7 +53,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own adv_staff_categories content.
+  // Exported permission: 'delete own adv_staff_categories content'.
   $permissions['delete own adv_staff_categories content'] = array(
     'name' => 'delete own adv_staff_categories content',
     'roles' => array(
@@ -64,7 +64,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own adv_staff_member content.
+  // Exported permission: 'delete own adv_staff_member content'.
   $permissions['delete own adv_staff_member content'] = array(
     'name' => 'delete own adv_staff_member content',
     'roles' => array(
@@ -75,7 +75,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any adv_staff_categories content.
+  // Exported permission: 'edit any adv_staff_categories content'.
   $permissions['edit any adv_staff_categories content'] = array(
     'name' => 'edit any adv_staff_categories content',
     'roles' => array(
@@ -86,7 +86,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any adv_staff_member content.
+  // Exported permission: 'edit any adv_staff_member content'.
   $permissions['edit any adv_staff_member content'] = array(
     'name' => 'edit any adv_staff_member content',
     'roles' => array(
@@ -97,7 +97,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own adv_staff_categories content.
+  // Exported permission: 'edit own adv_staff_categories content'.
   $permissions['edit own adv_staff_categories content'] = array(
     'name' => 'edit own adv_staff_categories content',
     'roles' => array(
@@ -108,7 +108,7 @@ function ca_adv_staff_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own adv_staff_member content.
+  // Exported permission: 'edit own adv_staff_member content'.
   $permissions['edit own adv_staff_member content'] = array(
     'name' => 'edit own adv_staff_member content',
     'roles' => array(
