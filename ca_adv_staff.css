@@ -31,6 +31,7 @@
 .ca-adv-staff-category-list-4 .view-ca-adv-staff-category-list h3 {font-size: 1.3em; margin-bottom: 10px;}
 
 /* Staff Member Node */
-.ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-1,
-.ca-adv-staff-member-node .pane-ca-adv-staff-member-node-ca-staff-node-2 {float: left; margin: 0 15px 5px 0;}
+.pane-ca-adv-staff-member-node-ca-staff-node-1 {float: left;}
+.pane-ca-adv-staff-member-node-ca-staff-node-1 .views-row {padding-bottom: 5px;}
+.pane-ca-adv-staff-member-node-ca-staff-node-1 .views-field {padding-right: 15px;}
 .ca-adv-staff-member-node .view h3 {text-align: center; margin: 0; max-width: 200px;}

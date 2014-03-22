@@ -1,0 +1,97 @@
+.ca-adv-staff-category-list table, 
+.ca-adv-staff-category-list tbody, 
+.ca-adv-staff-category-list tr, 
+.ca-adv-staff-category-list tr td,
+.ca-adv-staff-member-list table, 
+.ca-adv-staff-member-list tbody, 
+.ca-adv-staff-member-list tr, 
+.ca-adv-staff-member-list tr td {
+  display:block;
+  width: 100%;
+  border: none;
+}
+
+.ca-adv-staff-category-list tr,
+.ca-adv-staff-member-list tr {background: none;}
+
+.ca-adv-staff-category-list tr td,
+.ca-adv-staff-member-list tr td {
+  float: left;
+  padding: 0;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+.pane-ca-adv-staff-member-node-ca-staff-node-1 {
+  float: none;
+  text-align: center;
+}
+
+.pane-ca-adv-staff-member-node-ca-staff-node-1 .block-inner {
+  margin-right: 10px;
+}
+
+.pane-ca-adv-staff-member-node-ca-staff-node-1 .views-row {
+  padding-bottom: 5px;
+}
+
+.pane-ca-adv-staff-member-node-ca-staff-node-1 .views-field {
+  padding-right: 0;
+}
+
+.ca-adv-staff-member-node .view h3 {
+  max-width: none;
+}
+
+.feed-icon {clear: both;}
+
+@media only screen and (min-width:481px) {
+  .ca-adv-staff-category-list tr td,
+  .ca-adv-staff-member-list tr td {
+    width: 50%;
+  }
+
+  .pane-ca-adv-staff-member-node-ca-staff-node-1 {
+    float: left;
+  }
+
+  .pane-ca-adv-staff-member-node-ca-staff-node-1 .block-inner {
+    margin-right: 0;
+  }
+
+  .pane-ca-adv-staff-member-node-ca-staff-node-1 .views-field {
+    padding-right: 15px;
+  }
+
+  .ca-adv-staff-member-node .view h3 {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 799px) {
+  .ca-adv-staff-category-list tr:nth-child(1) td:nth-child(2n + 1), 
+  .ca-adv-staff-member-list tr:nth-child(1) td:nth-child(2n + 1) {clear: left;}
+  .ca-adv-staff-category-list tr:nth-child(2) td:nth-child(2), 
+  .ca-adv-staff-member-list tr:nth-child(2) td:nth-child(2) {clear: left;}
+  .ca-adv-staff-category-list tr:nth-child(3) td:nth-child(2n + 1),
+  .ca-adv-staff-member-list tr:nth-child(3) td:nth-child(2n + 1) {clear: left;}
+  .ca-adv-staff-category-list tr:nth-child(4) td:nth-child(2),
+  .ca-adv-staff-member-list tr:nth-child(4) td:nth-child(2) {clear: left;}
+}
+
+@media only screen and (min-width:800px) {
+  .ca-adv-staff-category-list table,
+  .ca-adv-staff-member-list table,
+  .ca-adv-staff-category-list tbody, 
+  .ca-adv-staff-member-list tbody {display: table;}
+  .ca-adv-staff-category-list tr, 
+  .ca-adv-staff-member-list tr {display: table-row;}
+  .ca-adv-staff-category-list td,
+  .ca-adv-staff-member-list td {display: table-celll;}
+
+  .ca-adv-staff-category-list tr td,
+  .ca-adv-staff-member-list tr td {
+    padding: 0;
+    width: 33%;
+  }
+}
