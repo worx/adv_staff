@@ -98,7 +98,7 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List View Template 2',
+    'title' => 'CA Adv Staff: Member List Grid View Template 2',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -529,6 +529,164 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_adv_staff_n_node_view_panel_context_2'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_staff_n_node_view_panel_context_3';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 7;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Member List Flex View Template 1',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '64218529-c1f1-45b3-8b39-2529c9edffb1';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f4917cd7-2fb7-41dd-8055-4049e66d0738';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f4917cd7-2fb7-41dd-8055-4049e66d0738';
+    $display->content['new-f4917cd7-2fb7-41dd-8055-4049e66d0738'] = $pane;
+    $display->panels['middle'][0] = 'new-f4917cd7-2fb7-41dd-8055-4049e66d0738';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_staff_n_node_view_panel_context_3'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_staff_n_node_view_panel_context_4';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 11;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Member List Flex View Template 2',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_two_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-2',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '32a9a8ed-6801-4800-a7e1-c7d6d191785f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-eb6c5930-0a31-4269-a470-6fb2306326b7';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_flex_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'eb6c5930-0a31-4269-a470-6fb2306326b7';
+    $display->content['new-eb6c5930-0a31-4269-a470-6fb2306326b7'] = $pane;
+    $display->panels['middle'][0] = 'new-eb6c5930-0a31-4269-a470-6fb2306326b7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_staff_n_node_view_panel_context_4'] = $handler;
 
   return $export;
 }
@@ -1052,7 +1210,7 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Template 1',
+    'title' => 'CA Adv Staff: Category List Grid Template 1',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -1120,7 +1278,7 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 2;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Template 2',
+    'title' => 'CA Adv Staff: Category List Grid Template 2',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -1256,7 +1414,7 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 4;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Grouped Member List View Template Four',
+    'title' => 'CA Adv Staff: Grouped Member List Grid View Template Four',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -1378,6 +1536,286 @@ function ca_adv_staff_default_page_manager_pages() {
     $display->panels['menu'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view_panel_context_5';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 5;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Category List Flex Template 1',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '017234b5-4620-45f4-94db-6533ee1c66bf';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7c274de2-3cf3-414f-b56d-520f020190c7';
+    $display->content['new-7c274de2-3cf3-414f-b56d-520f020190c7'] = $pane;
+    $display->panels['middle'][0] = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view_panel_context_6';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 6;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Category List Flex Template 2',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-2',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '2f758ffa-fb52-4b35-a9d3-66f3a7dabc72';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f6f127d8-8d37-4829-86b2-84765323b859';
+    $display->content['new-f6f127d8-8d37-4829-86b2-84765323b859'] = $pane;
+    $display->panels['middle'][0] = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view_panel_context_7';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 7;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Grouped Member List Flex View Template Four',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-4',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_four_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+          1 => 1,
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Content',
+        'width' => 99.999999999999986,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'content',
+      ),
+      1 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu_',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'menu_' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => 'menu',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+      'menu_' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_staff_list-staff_grouped_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $display->content['new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43'] = $pane;
+    $display->panels['center'][0] = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'menu_';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['menu_'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_staff_list_view'] = $page;

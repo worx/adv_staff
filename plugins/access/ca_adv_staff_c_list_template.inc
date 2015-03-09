@@ -27,9 +27,12 @@ function ca_adv_staff_c_list_template_access_settings($form, &$form_state, $conf
     '#title' => t('Staff\'s Category list template'),
     '#options' => array(
       'ca_adv_staff_c_list_template_one' => t('Template one'),
+      'ca_adv_staff_c_list_template_one_flex' => t('Template one Flex'),
       'ca_adv_staff_c_list_template_two' => t('Template two'),
+      'ca_adv_staff_c_list_template_two_flex' => t('Template two Flex'),
       'ca_adv_staff_c_list_template_three' => t('Template three'),
       'ca_adv_staff_c_list_template_four' => t('Template four'),
+      'ca_adv_staff_c_list_template_four_flex' => t('Template four Flex'),
     ),
     '#required' => TRUE,
     '#default_value' => $conf['ca_adv_staff_c_list_template'],
@@ -58,14 +61,23 @@ function ca_adv_staff_c_list_template_access_summary($conf, $context) {
   if ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_one') {
     $template = t('Template one');
   }
+  elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_one_flex') {
+    $template = t('Template one Flex');
+  }
   elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_two') {
     $template = t('Template two');
+  }
+  elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_two_flex') {
+    $template = t('Template two Flex');
   }
   elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_three') {
     $template = t('Template three');
   }
-  else {
+  elseif ($conf['ca_adv_staff_c_list_template'] == 'ca_adv_staff_c_list_template_four_flex') {
     $template = t('Template four');
+  }
+  else {
+    $template = t('Template four Flex');
   }
 
   return t('Display template is set to: ' . $template);
