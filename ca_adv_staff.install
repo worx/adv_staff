@@ -15,15 +15,7 @@ function ca_adv_staff_install() {
     'private_pid' => 2,
   );
   
-  $imce_roles_profiles[246778053] = $imce_roles_profiles_vaule;
-
-  $imce_roles_profiles_vaule = array (
-    'weight' => '-8',
-    'public_pid' => 3,
-    'private_pid' => 3,
-  );
-  
-  $imce_roles_profiles[246307762] = $imce_roles_profiles_vaule;
+  $imce_roles_profiles[135943149] = $imce_roles_profiles_vaule;
 
   variable_set('imce_roles_profiles', $imce_roles_profiles);
 
@@ -34,12 +26,31 @@ function ca_adv_staff_install() {
 
   // Get the worx_aurora_base_enable variable to default set if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+  
+  /**
+   * added assign node weight.
+   */
+  user_role_change_permissions(135943149, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
 }
 
 /**
  * Get the worx_aurora_base_enable variable to default set if not already set.
+ * add media from remote sources, assign node weight.
  */
 function ca_adv_staff_update_7000() {
   // Get the worx_aurora_base_enable variable to default set if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+  
+  /**
+   * added assign node weight.
+   */
+  user_role_change_permissions(135943149, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
 }

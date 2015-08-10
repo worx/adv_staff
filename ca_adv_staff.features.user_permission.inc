@@ -15,7 +15,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'create adv_staff_categories content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -26,7 +26,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'create adv_staff_member content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -37,7 +37,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'delete any adv_staff_categories content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -58,7 +58,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'delete own adv_staff_categories content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -69,7 +69,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'delete own adv_staff_member content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -80,7 +80,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'edit any adv_staff_categories content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -91,7 +91,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'edit any adv_staff_member content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -102,7 +102,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'edit own adv_staff_categories content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -113,7 +113,7 @@ function ca_adv_staff_user_default_permissions() {
     'name' => 'edit own adv_staff_member content',
     'roles' => array(
       'administrator' => 'administrator',
-      'adv staff' => 'adv staff',
+      'adv staff admin' => 'adv staff admin',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
