@@ -2190,7 +2190,7 @@ function ca_adv_staff_default_page_manager_pages() {
       'center' => array(
         'type' => 'region',
         'title' => 'Content',
-        'width' => 99.999999999999986,
+        'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => 'content',
@@ -2856,7 +2856,7 @@ function ca_adv_staff_default_page_manager_pages() {
       'center' => array(
         'type' => 'region',
         'title' => 'Content',
-        'width' => 99.999999999999986,
+        'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => 'content',

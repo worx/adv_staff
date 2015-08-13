@@ -54,7 +54,8 @@ function ca_adv_staff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-adv_staff_categories-field_ca_adv_staff_c_photo'
+  // Exported field_instance:
+  // 'node-adv_staff_categories-field_ca_adv_staff_c_photo'
   $field_instances['node-adv_staff_categories-field_ca_adv_staff_c_photo'] = array(
     'bundle' => 'adv_staff_categories',
     'deleted' => 0,
@@ -97,18 +98,15 @@ function ca_adv_staff_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'manualcrop_crop_info' => 1,
-        'manualcrop_default_crop_area' => 0,
+        'manualcrop_default_crop_area' => 1,
         'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
+        'manualcrop_require_cropping' => array(),
           'crop_default_square' => 'crop_default_square',
-          'crop_medium_portrait' => 'crop_medium_portrait',
-          'crop_medium_square' => 'crop_medium_square',
-        ),
         'manualcrop_styles_list' => array(
           'crop_default_square' => 'crop_default_square',
           'crop_medium_portrait' => 'crop_medium_portrait',
@@ -116,7 +114,7 @@ function ca_adv_staff_field_default_field_instances() {
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'crop_default_square',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -168,7 +166,8 @@ function ca_adv_staff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-adv_staff_member-field_ca_adv_staff_m_category'
+  // Exported field_instance:
+  // 'node-adv_staff_member-field_ca_adv_staff_m_category'
   $field_instances['node-adv_staff_member-field_ca_adv_staff_m_category'] = array(
     'bundle' => 'adv_staff_member',
     'default_value' => NULL,
@@ -257,12 +256,10 @@ function ca_adv_staff_field_default_field_instances() {
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
         'manualcrop_require_cropping' => array(
           'crop_default_square' => 'crop_default_square',
-          'crop_medium_portrait' => 'crop_medium_portrait',
-          'crop_medium_square' => 'crop_medium_square',
         ),
         'manualcrop_styles_list' => array(
           'crop_default_square' => 'crop_default_square',
