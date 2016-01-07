@@ -10,7 +10,7 @@
 function ca_adv_staff_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-adv_staff_categories-body'
+  // Exported field_instance: 'node-adv_staff_categories-body'.
   $field_instances['node-adv_staff_categories-body'] = array(
     'bundle' => 'adv_staff_categories',
     'default_value' => NULL,
@@ -55,7 +55,7 @@ function ca_adv_staff_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-adv_staff_categories-field_ca_adv_staff_c_photo'
+  // 'node-adv_staff_categories-field_ca_adv_staff_c_photo'.
   $field_instances['node-adv_staff_categories-field_ca_adv_staff_c_photo'] = array(
     'bundle' => 'adv_staff_categories',
     'deleted' => 0,
@@ -113,7 +113,7 @@ function ca_adv_staff_field_default_field_instances() {
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'crop_default_square',
+        'preview_image_style' => 'crop_default_square_preview',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -121,7 +121,7 @@ function ca_adv_staff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-adv_staff_member-body'
+  // Exported field_instance: 'node-adv_staff_member-body'.
   $field_instances['node-adv_staff_member-body'] = array(
     'bundle' => 'adv_staff_member',
     'default_value' => NULL,
@@ -166,7 +166,7 @@ function ca_adv_staff_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-adv_staff_member-field_ca_adv_staff_m_category'
+  // 'node-adv_staff_member-field_ca_adv_staff_m_category'.
   $field_instances['node-adv_staff_member-field_ca_adv_staff_m_category'] = array(
     'bundle' => 'adv_staff_member',
     'default_value' => NULL,
@@ -207,7 +207,8 @@ function ca_adv_staff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-adv_staff_member-field_ca_adv_staff_m_photo'
+  // Exported field_instance:
+  // 'node-adv_staff_member-field_ca_adv_staff_m_photo'.
   $field_instances['node-adv_staff_member-field_ca_adv_staff_m_photo'] = array(
     'bundle' => 'adv_staff_member',
     'deleted' => 0,
@@ -265,7 +266,7 @@ function ca_adv_staff_field_default_field_instances() {
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'crop_default_square',
+        'preview_image_style' => 'crop_default_square_preview',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -273,7 +274,8 @@ function ca_adv_staff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-adv_staff_member-field_ca_adv_staff_m_title'
+  // Exported field_instance:
+  // 'node-adv_staff_member-field_ca_adv_staff_m_title'.
   $field_instances['node-adv_staff_member-field_ca_adv_staff_m_title'] = array(
     'bundle' => 'adv_staff_member',
     'default_value' => NULL,

@@ -24,12 +24,11 @@ $plugin = array(
 function ca_adv_staff_m_list_template_access_settings($form, &$form_state, $conf) {
   $form['settings']['ca_adv_staff_m_list_template'] = array(
     '#type' => 'select',
-    '#title' => t('Staff\'s Member list template'),
+    '#title' => t('Adv Staff\'s Member list template'),
     '#options' => array(
-      'ca_adv_staff_m_list_template_one' => t('Template one'),
+      'ca_adv_staff_m_list_template_one' => t('Grid'),
+      'ca_adv_staff_m_list_template_one_flex' => t('Grid Flex'),
       'ca_adv_staff_m_list_template_two' => t('Template two'),
-      'ca_adv_staff_m_list_template_three' => t('Template three'),
-      'ca_adv_staff_m_list_template_four' => t('Template four'),
     ),
     '#required' => TRUE,
     '#default_value' => $conf['ca_adv_staff_m_list_template'],
@@ -55,17 +54,17 @@ function ca_adv_staff_m_list_template_access_check($conf, $context) {
  * Provide a summary description based upon the checked adv staff list type.
  */
 function ca_adv_staff_m_list_template_access_summary($conf, $context) {
-  if ($conf['ca_adv_staff_m_list_template'] == 'ca_adv_staff_m_list_template_one') {
-    $template = t('Template one');
-  }
-  elseif ($conf['ca_adv_staff_m_list_template'] == 'ca_adv_staff_m_list_template_two') {
-    $template = t('Template two');
-  }
-  elseif ($conf['ca_adv_staff_m_list_template'] == 'ca_adv_staff_m_list_template_three') {
-    $template = t('Template three');
-  }
-  else {
-    $template = t('Template four');
+  switch ($conf['ca_adv_staff_m_list_template']) {
+    case 'ca_adv_staff_m_list_template_one':
+      $template = t('Template one');
+      break;
+    case 'ca_adv_staff_m_list_template_one_flex':
+      $template = t('Template one Flex');
+      break;
+    case 'ca_adv_staff_m_list_template_two':
+      $template = t('Template two');
+      break;
+    
   }
 
   return t('Display template is set to: ' . $template);

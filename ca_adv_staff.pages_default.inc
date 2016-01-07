@@ -19,7 +19,7 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -22;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List View Template 1',
+    'title' => 'CA Adv Staff: Member Grid 1 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -49,7 +49,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-1',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-1 ca-adv-staff-member-list-1-square',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -66,10 +66,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6b5ac0ba-9f1e-4d87-9de4-53ee6ba8fbab';
+    $pane->pid = 'new-53074e37-5917-42dd-9b27-c713e04ad016';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_list_1';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -81,9 +81,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '6b5ac0ba-9f1e-4d87-9de4-53ee6ba8fbab';
-    $display->content['new-6b5ac0ba-9f1e-4d87-9de4-53ee6ba8fbab'] = $pane;
-    $display->panels['middle'][0] = 'new-6b5ac0ba-9f1e-4d87-9de4-53ee6ba8fbab';
+    $pane->uuid = '53074e37-5917-42dd-9b27-c713e04ad016';
+    $display->content['new-53074e37-5917-42dd-9b27-c713e04ad016'] = $pane;
+    $display->panels['middle'][0] = 'new-53074e37-5917-42dd-9b27-c713e04ad016';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -98,7 +98,93 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -21;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List Grid View Template 2',
+    'title' => 'CA Adv Staff: Member Grid 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-1 ca-adv-staff-member-list-1-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '32a9a8ed-6801-4800-a7e1-c7d6d191785f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-dc2fe39a-e3cf-4586-a40d-183879a62191';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_member_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dc2fe39a-e3cf-4586-a40d-183879a62191';
+    $display->content['new-dc2fe39a-e3cf-4586-a40d-183879a62191'] = $pane;
+    $display->panels['middle'][0] = 'new-dc2fe39a-e3cf-4586-a40d-183879a62191';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_staff_l_node_view_panel_context_2'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_staff_l_node_view_panel_context_3';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -20;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Member List View 2 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -124,82 +210,10 @@ function ca_adv_staff_default_page_manager_handlers() {
           ),
           'not' => FALSE,
         ),
-      ),
-      'logic' => 'and',
-    ),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-2',
-  );
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '%node:title';
-  $display->uuid = '32a9a8ed-6801-4800-a7e1-c7d6d191785f';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-f33f3902-dad7-4fdc-89ba-37c56e0ae228';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_list_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f33f3902-dad7-4fdc-89ba-37c56e0ae228';
-    $display->content['new-f33f3902-dad7-4fdc-89ba-37c56e0ae228'] = $pane;
-    $display->panels['middle'][0] = 'new-f33f3902-dad7-4fdc-89ba-37c56e0ae228';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $export['ca_adv_staff_l_node_view_panel_context_2'] = $handler;
-
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'ca_adv_staff_l_node_view_panel_context_3';
-  $handler->task = 'node_view';
-  $handler->subtask = '';
-  $handler->handler = 'panel_context';
-  $handler->weight = -20;
-  $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List View Template 3',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'node_type',
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
           'settings' => array(
-            'type' => array(
-              'adv_staff_categories' => 'adv_staff_categories',
-            ),
-          ),
-          'context' => 'argument_entity_id:node_1',
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'ca_adv_staff_m_list_template',
-          'settings' => array(
-            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_three',
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
           ),
           'not' => FALSE,
         ),
@@ -207,7 +221,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-3',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-2 ca-adv-staff-member-list-2-square',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -224,10 +238,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-e8186a5c-ed0b-4496-a304-b54167caaafd';
+    $pane->pid = 'new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_list_3';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_list_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -239,9 +253,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e8186a5c-ed0b-4496-a304-b54167caaafd';
-    $display->content['new-e8186a5c-ed0b-4496-a304-b54167caaafd'] = $pane;
-    $display->panels['middle'][0] = 'new-e8186a5c-ed0b-4496-a304-b54167caaafd';
+    $pane->uuid = 'b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
+    $display->content['new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe'] = $pane;
+    $display->panels['middle'][0] = 'new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -256,7 +270,7 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -19;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List View Template 4',
+    'title' => 'CA Adv Staff: Member List View 2 Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -278,7 +292,14 @@ function ca_adv_staff_default_page_manager_handlers() {
         1 => array(
           'name' => 'ca_adv_staff_m_list_template',
           'settings' => array(
-            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_four',
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
@@ -286,7 +307,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-4',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-2 ca-adv-staff-member-list-2-portrait',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -303,10 +324,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3dea68c0-fc6a-4882-8e50-04d219803a3c';
+    $pane->pid = 'new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_list_4';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_member_list_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -318,9 +339,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '3dea68c0-fc6a-4882-8e50-04d219803a3c';
-    $display->content['new-3dea68c0-fc6a-4882-8e50-04d219803a3c'] = $pane;
-    $display->panels['middle'][0] = 'new-3dea68c0-fc6a-4882-8e50-04d219803a3c';
+    $pane->uuid = 'a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
+    $display->content['new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7'] = $pane;
+    $display->panels['middle'][0] = 'new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -333,9 +354,9 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -18;
+  $handler->weight = -16;
   $handler->conf = array(
-    'title' => ' CA Adv Staff: Member Node View Template 1',
+    'title' => 'CA Adv Staff: Member Node View 1 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -365,7 +386,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1',
+    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1 ca-adv-staff-member-node-1-square',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -382,10 +403,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-0ab70d89-7490-4b98-b941-a5dba6e3e5d5';
+    $pane->pid = 'new-dbf10557-9d21-46a2-819f-4796bc3fd9d6';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1';
+    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1_square';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -397,9 +418,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '0ab70d89-7490-4b98-b941-a5dba6e3e5d5';
-    $display->content['new-0ab70d89-7490-4b98-b941-a5dba6e3e5d5'] = $pane;
-    $display->panels['middle'][0] = 'new-0ab70d89-7490-4b98-b941-a5dba6e3e5d5';
+    $pane->uuid = 'dbf10557-9d21-46a2-819f-4796bc3fd9d6';
+    $display->content['new-dbf10557-9d21-46a2-819f-4796bc3fd9d6'] = $pane;
+    $display->panels['middle'][0] = 'new-dbf10557-9d21-46a2-819f-4796bc3fd9d6';
     $pane = new stdClass();
     $pane->pid = 'new-089efd61-602e-4294-82d9-bb8d476eb76c';
     $pane->panel = 'middle';
@@ -435,9 +456,9 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -17;
+  $handler->weight = -15;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member Node View Template 2',
+    'title' => 'CA Adv Staff: Member Node View Template 1 Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -457,9 +478,9 @@ function ca_adv_staff_default_page_manager_handlers() {
           'not' => FALSE,
         ),
         1 => array(
-          'name' => 'ca_adv_staff_node_template',
+          'name' => 'ca_adv_staff_dispaly_template',
           'settings' => array(
-            'ca_adv_staff_node_template' => 'ca_adv_staff_node_template_two',
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
@@ -467,7 +488,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-2',
+    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1 ca-adv-staff-member-node-1-portrait',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -484,10 +505,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-99175e9f-77c3-412a-8669-71f8caba942d';
+    $pane->pid = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_2';
+    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1_portrait';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -499,9 +520,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '99175e9f-77c3-412a-8669-71f8caba942d';
-    $display->content['new-99175e9f-77c3-412a-8669-71f8caba942d'] = $pane;
-    $display->panels['middle'][0] = 'new-99175e9f-77c3-412a-8669-71f8caba942d';
+    $pane->uuid = '2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $display->content['new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a'] = $pane;
+    $display->panels['middle'][0] = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
     $pane = new stdClass();
     $pane->pid = 'new-cf288c24-c97c-441c-a1e8-03b74bff76fe';
     $pane->panel = 'middle';
@@ -537,9 +558,9 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -16;
+  $handler->weight = -18;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List Flex View Template 1',
+    'title' => 'CA Adv Staff: Member List Flex View 1 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -565,11 +586,18 @@ function ca_adv_staff_default_page_manager_handlers() {
           ),
           'not' => FALSE,
         ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1 ca-adv-staff-member-flex-1-square',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -586,10 +614,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f4917cd7-2fb7-41dd-8055-4049e66d0738';
+    $pane->pid = 'new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_flex_1';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_flex_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -601,9 +629,9 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f4917cd7-2fb7-41dd-8055-4049e66d0738';
-    $display->content['new-f4917cd7-2fb7-41dd-8055-4049e66d0738'] = $pane;
-    $display->panels['middle'][0] = 'new-f4917cd7-2fb7-41dd-8055-4049e66d0738';
+    $pane->uuid = '67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
+    $display->content['new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39'] = $pane;
+    $display->panels['middle'][0] = 'new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -616,9 +644,9 @@ function ca_adv_staff_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -15;
+  $handler->weight = -17;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Member List Flex View Template 2',
+    'title' => 'CA Adv Staff: Member List Flex View 1 Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -640,7 +668,14 @@ function ca_adv_staff_default_page_manager_handlers() {
         1 => array(
           'name' => 'ca_adv_staff_m_list_template',
           'settings' => array(
-            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_two_flex',
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
@@ -648,7 +683,7 @@ function ca_adv_staff_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-2',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1 ca-adv-staff-member-flex-1-portrait',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -665,10 +700,10 @@ function ca_adv_staff_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-eb6c5930-0a31-4269-a470-6fb2306326b7';
+    $pane->pid = 'new-b27a3cbe-ca32-4547-be21-e01cac5eb27e';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_member_flex_2';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_flex_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -680,13 +715,757 @@ function ca_adv_staff_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'eb6c5930-0a31-4269-a470-6fb2306326b7';
-    $display->content['new-eb6c5930-0a31-4269-a470-6fb2306326b7'] = $pane;
-    $display->panels['middle'][0] = 'new-eb6c5930-0a31-4269-a470-6fb2306326b7';
+    $pane->uuid = 'b27a3cbe-ca32-4547-be21-e01cac5eb27e';
+    $display->content['new-b27a3cbe-ca32-4547-be21-e01cac5eb27e'] = $pane;
+    $display->panels['middle'][0] = 'new-b27a3cbe-ca32-4547-be21-e01cac5eb27e';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_adv_staff_n_node_view_panel_context_4'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-grid-1-portrait';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member Grid 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-1 ca-adv-staff-member-list-1-portrait',
+    'name' => 'aurora-ca-adv-staff-member-grid-1-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '32a9a8ed-6801-4800-a7e1-c7d6d191785f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-dc2fe39a-e3cf-4586-a40d-183879a62191';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_member_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dc2fe39a-e3cf-4586-a40d-183879a62191';
+    $display->content['new-dc2fe39a-e3cf-4586-a40d-183879a62191'] = $pane;
+    $display->panels['middle'][0] = 'new-dc2fe39a-e3cf-4586-a40d-183879a62191';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-grid-1-portrait'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-grid-1-square';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member Grid 1 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_member' => 'adv_staff_member',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1 ca-adv-staff-member-node-1-portrait',
+    'name' => 'aurora-ca-adv-staff-member-grid-1-square',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '3add1555-8fd7-4e00-a9c7-b6793c8dcc00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1_portrait';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $display->content['new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a'] = $pane;
+    $display->panels['middle'][0] = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $pane = new stdClass();
+    $pane->pid = 'new-cf288c24-c97c-441c-a1e8-03b74bff76fe';
+    $pane->panel = 'middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'cf288c24-c97c-441c-a1e8-03b74bff76fe';
+    $display->content['new-cf288c24-c97c-441c-a1e8-03b74bff76fe'] = $pane;
+    $display->panels['middle'][1] = 'new-cf288c24-c97c-441c-a1e8-03b74bff76fe';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-grid-1-square'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-list-flex-view-1-portrait';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -26;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member List Flex View 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1 ca-adv-staff-member-flex-1-portrait',
+    'name' => 'aurora-ca-adv-staff-member-list-flex-view-1-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '32a9a8ed-6801-4800-a7e1-c7d6d191785f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-b27a3cbe-ca32-4547-be21-e01cac5eb27e';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b27a3cbe-ca32-4547-be21-e01cac5eb27e';
+    $display->content['new-b27a3cbe-ca32-4547-be21-e01cac5eb27e'] = $pane;
+    $display->panels['middle'][0] = 'new-b27a3cbe-ca32-4547-be21-e01cac5eb27e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-list-flex-view-1-portrait'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-list-flex-view-1-square';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -25;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member List Flex View 1 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-flex ca-adv-staff-member-flex-1 ca-adv-staff-member-flex-1-square',
+    'name' => 'aurora-ca-adv-staff-member-list-flex-view-1-square',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '64218529-c1f1-45b3-8b39-2529c9edffb1';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
+    $display->content['new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39'] = $pane;
+    $display->panels['middle'][0] = 'new-67b4f13b-74c2-4a12-9d8e-08ff5e5d3a39';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-list-flex-view-1-square'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-list-view-2-portrait';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -27;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member List View 2 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-2 ca-adv-staff-member-list-2-portrait',
+    'name' => 'aurora-ca-adv-staff-member-list-view-2-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'f33065a4-ee08-4a55-9e2f-0c2a6bbfcc76';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_member_list_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
+    $display->content['new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7'] = $pane;
+    $display->panels['middle'][0] = 'new-a3c83ab4-0267-4deb-b2fd-9c6c0c20ccb7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-list-view-2-portrait'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-list-view-2-square';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -28;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member List View 2 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_categories' => 'adv_staff_categories',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_m_list_template',
+          'settings' => array(
+            'ca_adv_staff_m_list_template' => 'ca_adv_staff_m_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-list ca-adv-staff-member-list-2 ca-adv-staff-member-list-2-square',
+    'name' => 'aurora-ca-adv-staff-member-list-view-2-square',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '8adca3e4-3993-49a4-811f-909189f7279c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_member_list_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
+    $display->content['new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe'] = $pane;
+    $display->panels['middle'][0] = 'new-b1a6fe0e-aac9-4ba1-b4fc-17ceb7b7ebfe';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-list-view-2-square'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-node-view-1-square';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -24;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member Node View 1 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_member' => 'adv_staff_member',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_node_template',
+          'settings' => array(
+            'ca_adv_staff_node_template' => 'ca_adv_staff_node_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1 ca-adv-staff-member-node-1-square',
+    'name' => 'aurora-ca-adv-staff-member-node-view-1-square',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '7dcf0971-3048-4f78-bfe5-e263dbcbfd26';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-dbf10557-9d21-46a2-819f-4796bc3fd9d6';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1_square';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dbf10557-9d21-46a2-819f-4796bc3fd9d6';
+    $display->content['new-dbf10557-9d21-46a2-819f-4796bc3fd9d6'] = $pane;
+    $display->panels['middle'][0] = 'new-dbf10557-9d21-46a2-819f-4796bc3fd9d6';
+    $pane = new stdClass();
+    $pane->pid = 'new-089efd61-602e-4294-82d9-bb8d476eb76c';
+    $pane->panel = 'middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '089efd61-602e-4294-82d9-bb8d476eb76c';
+    $display->content['new-089efd61-602e-4294-82d9-bb8d476eb76c'] = $pane;
+    $display->panels['middle'][1] = 'new-089efd61-602e-4294-82d9-bb8d476eb76c';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-node-view-1-square'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__aurora-ca-adv-staff-member-node-view-template-1-portrait';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -23;
+  $handler->conf = array(
+    'title' => 'Aurora CA Adv Staff: Member Node View Template 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'adv_staff_member' => 'adv_staff_member',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-member-node ca-adv-staff-member-node-1 ca-adv-staff-member-node-1-portrait',
+    'name' => 'aurora-ca-adv-staff-member-node-view-template-1-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '3add1555-8fd7-4e00-a9c7-b6793c8dcc00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_node-ca_staff_node_1_portrait';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $display->content['new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a'] = $pane;
+    $display->panels['middle'][0] = 'new-2c28a520-0c3d-46b5-9ec0-d2f6edfe5b2a';
+    $pane = new stdClass();
+    $pane->pid = 'new-cf288c24-c97c-441c-a1e8-03b74bff76fe';
+    $pane->panel = 'middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'cf288c24-c97c-441c-a1e8-03b74bff76fe';
+    $display->content['new-cf288c24-c97c-441c-a1e8-03b74bff76fe'] = $pane;
+    $display->panels['middle'][1] = 'new-cf288c24-c97c-441c-a1e8-03b74bff76fe';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__aurora-ca-adv-staff-member-node-view-template-1-portrait'] = $handler;
 
   return $export;
 }
@@ -950,33 +1729,6 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_add_image_menu_context';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_add_image';
-  $handler->handler = 'menu_context';
-  $handler->weight = -29;
-  $handler->conf = array(
-    'title' => 'Context Admin',
-    'no_blocks' => FALSE,
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'context_admin_options' => 'noderef_create_node',
-    'context_admin_options_items' => 'adv_staff_member',
-    'context_admin_use_node_edit' => 0,
-    'submitted_context' => 'argument_entity_id:node_1',
-    'context_admin_field' => 'field_ca_adv_staff_m_category',
-    'context_admin_custom_redirect' => '',
-    'context_admin_autoforward' => 1,
-    'context_admin_content_types' => array(
-      'adv_staff_member' => 'field_ca_adv_staff_m_category',
-    ),
-  );
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
   $handler->name = 'page_ca_adv_staff_add_image__aurora_adv_staff_admin_add_membe';
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_add_image';
@@ -1097,6 +1849,33 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-7ffc5c4f-8454-4da6-8b60-1e4d1970e0db';
   $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_add_image_menu_context';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_add_image';
+  $handler->handler = 'menu_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Context Admin',
+    'no_blocks' => FALSE,
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'context_admin_options' => 'noderef_create_node',
+    'context_admin_options_items' => 'adv_staff_member',
+    'context_admin_use_node_edit' => 0,
+    'submitted_context' => 'argument_entity_id:node_1',
+    'context_admin_field' => 'field_ca_adv_staff_m_category',
+    'context_admin_custom_redirect' => '',
+    'context_admin_autoforward' => 1,
+    'context_admin_content_types' => array(
+      'adv_staff_member' => 'field_ca_adv_staff_m_category',
+    ),
+  );
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_staff_add_image'] = $page;
 
@@ -1656,13 +2435,13 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view_panel_context_2';
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_955edb80-aaf1-45ff-8fa1-1d5ece5e496f';
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -30;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Grid Template 1',
+    'title' => 'Aurora  Adv Staff: Category Grid 1 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -1670,13 +2449,1728 @@ function ca_adv_staff_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1 ca-adv-staff-category-list-1-square',
     'access' => array(
       'plugins' => array(
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
             'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '017234b5-4620-45f4-94db-6533ee1c66bf';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-bc89e546-ca9a-40de-8e49-7f12c22c509e';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1_square';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'bc89e546-ca9a-40de-8e49-7f12c22c509e';
+    $display->content['new-bc89e546-ca9a-40de-8e49-7f12c22c509e'] = $pane;
+    $display->panels['first-first'][0] = 'new-bc89e546-ca9a-40de-8e49-7f12c22c509e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_142ced2d-8dff-4661-af5f-9b52d06d0f14';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Aurora  Adv Staff: Category Grid 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1 ca-adv-staff-category-list-1-portrait',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '2f758ffa-fb52-4b35-a9d3-66f3a7dabc72';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-773e3a1a-d4f7-4d24-80d6-41a753d7f936';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1_portrait';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '773e3a1a-d4f7-4d24-80d6-41a753d7f936';
+    $display->content['new-773e3a1a-d4f7-4d24-80d6-41a753d7f936'] = $pane;
+    $display->panels['first-first'][0] = 'new-773e3a1a-d4f7-4d24-80d6-41a753d7f936';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_0cccd422-99bd-4df6-8856-5e432dd12a3d';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -28;
+  $handler->conf = array(
+    'title' => 'Aurora  Adv Staff: Grouped List Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group ca-adv-staff-category-group-square',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu',
+          1 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => '74.89517819706498',
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+      'menu' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => '25.10482180293501',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane = new stdClass();
+    $pane->pid = 'new-07286891-17ca-4b4c-9ce5-54c80cd13442';
+    $pane->panel = 'first-second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_grouped_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '07286891-17ca-4b4c-9ce5-54c80cd13442';
+    $display->content['new-07286891-17ca-4b4c-9ce5-54c80cd13442'] = $pane;
+    $display->panels['first-second'][0] = 'new-07286891-17ca-4b4c-9ce5-54c80cd13442';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__aurora-adv-staff-grouped-list-portrait';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -27;
+  $handler->conf = array(
+    'title' => 'Aurora Adv Staff: Grouped List Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group ca-adv-staff-category-group-portrait',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'name' => 'aurora-adv-staff-grouped-list-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu',
+          1 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => '74.89517819706498',
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+      'menu' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => '25.10482180293501',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane = new stdClass();
+    $pane->pid = 'new-fb950c21-6030-406c-a567-f573e3045eb7';
+    $pane->panel = 'first-second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_grouped_member_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'fb950c21-6030-406c-a567-f573e3045eb7';
+    $display->content['new-fb950c21-6030-406c-a567-f573e3045eb7'] = $pane;
+    $display->panels['first-second'][0] = 'new-fb950c21-6030-406c-a567-f573e3045eb7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_b98e86d1-2010-483e-9927-be1e6fde0a50';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -26;
+  $handler->conf = array(
+    'title' => 'Aurora Adv Staff: Category Flex 1 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1 ca-adv-staff-category-flex-1-square',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '017234b5-4620-45f4-94db-6533ee1c66bf';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-11747b09-3903-4b88-8325-b7a7bf96b9c3';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1_square';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '11747b09-3903-4b88-8325-b7a7bf96b9c3';
+    $display->content['new-11747b09-3903-4b88-8325-b7a7bf96b9c3'] = $pane;
+    $display->panels['first-first'][0] = 'new-11747b09-3903-4b88-8325-b7a7bf96b9c3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_a211ce3d-8ae3-4d7b-8d33-6280fb807b69';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -25;
+  $handler->conf = array(
+    'title' => 'Aurora  Adv Staff: Category Flex 1 Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1 ca-adv-staff-category-flex-1-portrait',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '2f758ffa-fb52-4b35-a9d3-66f3a7dabc72';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-fdf46674-4f2d-4f75-9dc5-0b9f7495e287';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1_portrait';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'fdf46674-4f2d-4f75-9dc5-0b9f7495e287';
+    $display->content['new-fdf46674-4f2d-4f75-9dc5-0b9f7495e287'] = $pane;
+    $display->panels['first-first'][0] = 'new-fdf46674-4f2d-4f75-9dc5-0b9f7495e287';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__panel_context_e1901d84-d37c-49f6-8ac8-380b9ca9646c';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -24;
+  $handler->conf = array(
+    'title' => 'Aurora Adv Staff: Grouped Flex Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-group-flex ca-adv-staff-category-group-flex-square',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+        3 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+          1 => 1,
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Content',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'content',
+      ),
+      1 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu_',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'menu_' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => 'menu',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+      'menu_' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane = new stdClass();
+    $pane->pid = 'new-7ab94651-5bfc-4511-bc3f-f922dc23667f';
+    $pane->panel = 'first-second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_grouped_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7ab94651-5bfc-4511-bc3f-f922dc23667f';
+    $display->content['new-7ab94651-5bfc-4511-bc3f-f922dc23667f'] = $pane;
+    $display->panels['first-second'][0] = 'new-7ab94651-5bfc-4511-bc3f-f922dc23667f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__aurora-adv-staff-grouped-flex-portrait';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -23;
+  $handler->conf = array(
+    'title' => 'Aurora Adv Staff: Grouped Flex Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-group-flex ca-adv-staff-category-group-flex-square',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
+          ),
+          'not' => FALSE,
+        ),
+        3 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two_flex',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'name' => 'aurora-adv-staff-grouped-flex-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+          1 => 1,
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Content',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'content',
+      ),
+      1 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu_',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'menu_' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => 'menu',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+      'menu_' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+      'ninth-first' => NULL,
+      'ninth-second' => NULL,
+      'ninth-third' => NULL,
+      'ninth-fourth' => NULL,
+      'ninth-fifth' => NULL,
+      'ninth-sixth' => NULL,
+      'tenth-first' => NULL,
+      'tenth-second' => NULL,
+      'tenth-third' => NULL,
+      'tenth-fourth' => NULL,
+      'tenth-fifth' => NULL,
+      'tenth-sixth' => NULL,
+      'eleventh-first' => NULL,
+      'eleventh-second' => NULL,
+      'eleventh-third' => NULL,
+      'eleventh-fourth' => NULL,
+      'eleventh-fifth' => NULL,
+      'eleventh-sixth' => NULL,
+      'twelfth-first' => NULL,
+      'twelfth-second' => NULL,
+      'twelfth-third' => NULL,
+      'twelfth-fourth' => NULL,
+      'twelfth-fifth' => NULL,
+      'twelfth-sixth' => NULL,
+      'thirteenth-first' => NULL,
+      'thirteenth-second' => NULL,
+      'thirteenth-third' => NULL,
+      'thirteenth-fourth' => NULL,
+      'thirteenth-fifth' => NULL,
+      'thirteenth-sixth' => NULL,
+      'fourteenth-first' => NULL,
+      'fourteenth-second' => NULL,
+      'fourteenth-third' => NULL,
+      'fourteenth-fourth' => NULL,
+      'fourteenth-fifth' => NULL,
+      'fourteenth-sixth' => NULL,
+      'fifteenth-first' => NULL,
+      'fifteenth-second' => NULL,
+      'fifteenth-third' => NULL,
+      'fifteenth-fourth' => NULL,
+      'fifteenth-fifth' => NULL,
+      'fifteenth-sixth' => NULL,
+      'sixteenth-first' => NULL,
+      'sixteenth-second' => NULL,
+      'sixteenth-third' => NULL,
+      'sixteenth-fourth' => NULL,
+      'sixteenth-fifth' => NULL,
+      'sixteenth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane = new stdClass();
+    $pane->pid = 'new-1305d2d5-c90c-4c81-bdf2-0a278014d683';
+    $pane->panel = 'first-second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_grouped_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1305d2d5-c90c-4c81-bdf2-0a278014d683';
+    $display->content['new-1305d2d5-c90c-4c81-bdf2-0a278014d683'] = $pane;
+    $display->panels['first-second'][0] = 'new-1305d2d5-c90c-4c81-bdf2-0a278014d683';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -22;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Category Grid 1 Square',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1 ca-adv-staff-category-list-1-square',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
           ),
           'not' => FALSE,
         ),
@@ -1699,10 +4193,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f88ea0f0-896a-4720-9fcd-5ee491707f8e';
+    $pane->pid = 'new-c4e4c553-b96c-4fd9-b859-bb622d143fbb';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1_square';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -1714,9 +4208,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f88ea0f0-896a-4720-9fcd-5ee491707f8e';
-    $display->content['new-f88ea0f0-896a-4720-9fcd-5ee491707f8e'] = $pane;
-    $display->panels['middle'][0] = 'new-f88ea0f0-896a-4720-9fcd-5ee491707f8e';
+    $pane->uuid = 'c4e4c553-b96c-4fd9-b859-bb622d143fbb';
+    $display->content['new-c4e4c553-b96c-4fd9-b859-bb622d143fbb'] = $pane;
+    $display->panels['middle'][0] = 'new-c4e4c553-b96c-4fd9-b859-bb622d143fbb';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1728,9 +4222,9 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -22;
+  $handler->weight = -21;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Grid Template 2',
+    'title' => 'CA Adv Staff: Category Grid 1 Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -1738,13 +4232,20 @@ function ca_adv_staff_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-2',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1 ca-adv-staff-category-list-1-portrait',
     'access' => array(
       'plugins' => array(
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
@@ -1767,10 +4268,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1';
+    $pane->pid = 'new-088a62a8-e881-4105-a9dc-33f3b80e7cf0';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_2';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1_portrait';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -1782,77 +4283,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'd91dc383-3a55-4135-b2fc-734a6a7f2cc1';
-    $display->content['new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1'] = $pane;
-    $display->panels['middle'][0] = 'new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view_panel_context_3';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -21;
-  $handler->conf = array(
-    'title' => ' CA Adv Staff: Category List Template 3',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-3',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_three',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '56b7ab55-1ea6-4b54-ac81-5395065674a7';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-54663d99-c348-4b68-964b-4e83247d2f06';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '54663d99-c348-4b68-964b-4e83247d2f06';
-    $display->content['new-54663d99-c348-4b68-964b-4e83247d2f06'] = $pane;
-    $display->panels['middle'][0] = 'new-54663d99-c348-4b68-964b-4e83247d2f06';
+    $pane->uuid = '088a62a8-e881-4105-a9dc-33f3b80e7cf0';
+    $display->content['new-088a62a8-e881-4105-a9dc-33f3b80e7cf0'] = $pane;
+    $display->panels['middle'][0] = 'new-088a62a8-e881-4105-a9dc-33f3b80e7cf0';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1866,11 +4299,11 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = -20;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Grouped Member List Grid View Template 4',
+    'title' => 'CA Adv Staff: Grouped Grid Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-4',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group ca-adv-staff-category-group-square',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -1880,7 +4313,14 @@ function ca_adv_staff_default_page_manager_pages() {
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_four',
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
           ),
           'not' => FALSE,
         ),
@@ -1949,10 +4389,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
+    $pane->pid = 'new-aed37c97-d9ed-42b5-b9ff-06353f96c5ba';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_grouped_member_list_1';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_grouped_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -1964,9 +4404,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'c236d8e1-ce28-449b-abf2-22499d5e60f1';
-    $display->content['new-c236d8e1-ce28-449b-abf2-22499d5e60f1'] = $pane;
-    $display->panels['center'][0] = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
+    $pane->uuid = 'aed37c97-d9ed-42b5-b9ff-06353f96c5ba';
+    $display->content['new-aed37c97-d9ed-42b5-b9ff-06353f96c5ba'] = $pane;
+    $display->panels['center'][0] = 'new-aed37c97-d9ed-42b5-b9ff-06353f96c5ba';
     $pane = new stdClass();
     $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
     $pane->panel = 'menu';
@@ -1987,7 +4427,148 @@ function ca_adv_staff_default_page_manager_pages() {
     $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
     $display->panels['menu'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_staff_list_view__ca-adv-staff-grouped-grid-portrait';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_staff_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -19;
+  $handler->conf = array(
+    'title' => 'CA Adv Staff: Grouped Grid Portrait',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group ca-adv-staff-category-group-portrait',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_staff_c_list_template',
+          'settings' => array(
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'name' => 'ca-adv-staff-grouped-grid-portrait',
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'menu',
+          1 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => '74.89517819706498',
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+      'menu' => array(
+        'type' => 'region',
+        'title' => 'Menu',
+        'width' => '25.10482180293501',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'center' => NULL,
+      'menu' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-39bcf594-c0bc-4122-a23c-4c62bb4222df';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_grouped_member_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '39bcf594-c0bc-4122-a23c-4c62bb4222df';
+    $display->content['new-39bcf594-c0bc-4122-a23c-4c62bb4222df'] = $pane;
+    $display->panels['center'][0] = 'new-39bcf594-c0bc-4122-a23c-4c62bb4222df';
+    $pane = new stdClass();
+    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+    $pane->panel = 'menu';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
+    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
+    $display->panels['menu'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
@@ -1997,9 +4578,9 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -19;
+  $handler->weight = -18;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Flex Template 1',
+    'title' => 'CA Adv Staff: Category Flex 1 Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -2007,13 +4588,20 @@ function ca_adv_staff_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1 ca-adv-staff-category-flex-1-square',
     'access' => array(
       'plugins' => array(
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
             'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
           ),
           'not' => FALSE,
         ),
@@ -2036,10 +4624,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
+    $pane->pid = 'new-bafbd62e-de46-4524-a9eb-96d246289be9';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1_square';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -2051,9 +4639,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '7c274de2-3cf3-414f-b56d-520f020190c7';
-    $display->content['new-7c274de2-3cf3-414f-b56d-520f020190c7'] = $pane;
-    $display->panels['middle'][0] = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
+    $pane->uuid = 'bafbd62e-de46-4524-a9eb-96d246289be9';
+    $display->content['new-bafbd62e-de46-4524-a9eb-96d246289be9'] = $pane;
+    $display->panels['middle'][0] = 'new-bafbd62e-de46-4524-a9eb-96d246289be9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2065,9 +4653,9 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -18;
+  $handler->weight = -17;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Category List Flex Template 2',
+    'title' => 'CA Adv Staff: Category Flex 1 Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -2075,13 +4663,20 @@ function ca_adv_staff_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-2',
+    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1 ca-adv-staff-category-flex-1-portrait',
     'access' => array(
       'plugins' => array(
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two_flex',
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
@@ -2104,10 +4699,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
+    $pane->pid = 'new-fa638f3e-ce81-4f98-911f-d5dce7ade090';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_2';
+    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1_portrait';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -2119,9 +4714,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f6f127d8-8d37-4829-86b2-84765323b859';
-    $display->content['new-f6f127d8-8d37-4829-86b2-84765323b859'] = $pane;
-    $display->panels['middle'][0] = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
+    $pane->uuid = 'fa638f3e-ce81-4f98-911f-d5dce7ade090';
+    $display->content['new-fa638f3e-ce81-4f98-911f-d5dce7ade090'] = $pane;
+    $display->panels['middle'][0] = 'new-fa638f3e-ce81-4f98-911f-d5dce7ade090';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2133,13 +4728,13 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -17;
+  $handler->weight = -16;
   $handler->conf = array(
-    'title' => 'CA Adv Staff: Grouped Member List Flex View Template 4',
+    'title' => 'CA Adv Staff: Grouped Flex Square',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-4',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group-flex ca-adv-staff-category-group-square-flex',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -2149,7 +4744,14 @@ function ca_adv_staff_default_page_manager_pages() {
         0 => array(
           'name' => 'ca_adv_staff_c_list_template',
           'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_four_flex',
+            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two_flex',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_staff_dispaly_template',
+          'settings' => array(
+            'ca_adv_staff_display' => 'ca_adv_staff_display_square',
           ),
           'not' => FALSE,
         ),
@@ -2229,10 +4831,10 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $pane->pid = 'new-4c74b05a-7865-4f2c-9803-8ee4ce0790d1';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_grouped_member_flex_1';
+    $pane->subtype = 'ca_adv_staff_member_list_square-staff_grouped_flex_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -2244,9 +4846,9 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
-    $display->content['new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43'] = $pane;
-    $display->panels['center'][0] = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $pane->uuid = '4c74b05a-7865-4f2c-9803-8ee4ce0790d1';
+    $display->content['new-4c74b05a-7865-4f2c-9803-8ee4ce0790d1'] = $pane;
+    $display->panels['center'][0] = 'new-4c74b05a-7865-4f2c-9803-8ee4ce0790d1';
     $pane = new stdClass();
     $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
     $pane->panel = 'menu_';
@@ -2273,461 +4875,21 @@ function ca_adv_staff_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_955edb80-aaf1-45ff-8fa1-1d5ece5e496f';
+  $handler->name = 'page_ca_adv_staff_list_view__ca-adv-staff-grouped-flex-portrait';
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_staff_list_view';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -15;
   $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category List Grid Template 1',
+    'title' => 'CA Adv Staff: Grouped Flex Portrait',
     'no_blocks' => 0,
     'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-group-flex ca-adv-staff-category-group-portrait-flex',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-1',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '017234b5-4620-45f4-94db-6533ee1c66bf';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-f88ea0f0-896a-4720-9fcd-5ee491707f8e';
-    $pane->panel = 'first-first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f88ea0f0-896a-4720-9fcd-5ee491707f8e';
-    $display->content['new-f88ea0f0-896a-4720-9fcd-5ee491707f8e'] = $pane;
-    $display->panels['first-first'][0] = 'new-f88ea0f0-896a-4720-9fcd-5ee491707f8e';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_142ced2d-8dff-4661-af5f-9b52d06d0f14';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -29;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category List Grid Template 2',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-2',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_two',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '2f758ffa-fb52-4b35-a9d3-66f3a7dabc72';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1';
-    $pane->panel = 'first-first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'd91dc383-3a55-4135-b2fc-734a6a7f2cc1';
-    $display->content['new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1'] = $pane;
-    $display->panels['first-first'][0] = 'new-d91dc383-3a55-4135-b2fc-734a6a7f2cc1';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_43bd1a3a-7069-4a08-887c-65949f99aef9';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -28;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category List Grid Template 3',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-3',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_three',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '56b7ab55-1ea6-4b54-ac81-5395065674a7';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-54663d99-c348-4b68-964b-4e83247d2f06';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_list_3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '54663d99-c348-4b68-964b-4e83247d2f06';
-    $display->content['new-54663d99-c348-4b68-964b-4e83247d2f06'] = $pane;
-    $display->panels['middle'][0] = 'new-54663d99-c348-4b68-964b-4e83247d2f06';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_0cccd422-99bd-4df6-8856-5e432dd12a3d';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -27;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category Grid View Template 4',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-list ca-adv-staff-category-list-4',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_four',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array(
-    'items' => array(
-      'canvas' => array(
-        'type' => 'row',
-        'contains' => 'column',
-        'children' => array(
-          0 => 'main',
-        ),
-        'parent' => NULL,
-      ),
-      'main' => array(
-        'type' => 'column',
-        'width' => 100,
-        'width_type' => '%',
-        'children' => array(
-          0 => 'main-row',
-        ),
-        'parent' => 'canvas',
-      ),
-      'main-row' => array(
-        'type' => 'row',
-        'contains' => 'region',
-        'children' => array(
-          0 => 'menu',
-          1 => 'center',
-        ),
-        'parent' => 'main',
-      ),
-      'center' => array(
-        'type' => 'region',
-        'title' => 'Center',
-        'width' => '74.89517819706498',
-        'width_type' => '%',
-        'parent' => 'main-row',
-      ),
-      'menu' => array(
-        'type' => 'region',
-        'title' => 'Menu',
-        'width' => '25.10482180293501',
-        'width_type' => '%',
-        'parent' => 'main-row',
-        'class' => '',
-      ),
-    ),
-  );
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-      'center' => NULL,
-      'menu' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = 'a243e4eb-f324-4a6e-8c5a-87bab85d6e00';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
-    $pane->panel = 'first-first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
-    $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
-    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
-    $pane = new stdClass();
-    $pane->pid = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
-    $pane->panel = 'first-second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_grouped_member_list_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'c236d8e1-ce28-449b-abf2-22499d5e60f1';
-    $display->content['new-c236d8e1-ce28-449b-abf2-22499d5e60f1'] = $pane;
-    $display->panels['first-second'][0] = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-c236d8e1-ce28-449b-abf2-22499d5e60f1';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_b98e86d1-2010-483e-9927-be1e6fde0a50';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -26;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category List Flex Template 1',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-1',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_one_flex',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '017234b5-4620-45f4-94db-6533ee1c66bf';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
-    $pane->panel = 'first-first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '7c274de2-3cf3-414f-b56d-520f020190c7';
-    $display->content['new-7c274de2-3cf3-414f-b56d-520f020190c7'] = $pane;
-    $display->panels['first-first'][0] = 'new-7c274de2-3cf3-414f-b56d-520f020190c7';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_a211ce3d-8ae3-4d7b-8d33-6280fb807b69';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -25;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Category List Flex Template 2',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-2',
     'access' => array(
       'plugins' => array(
         0 => array(
@@ -2738,93 +4900,19 @@ function ca_adv_staff_default_page_manager_pages() {
           'not' => FALSE,
         ),
         1 => array(
-          'name' => 'worx_aurora_base_settings',
+          'name' => 'ca_adv_staff_dispaly_template',
           'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+            'ca_adv_staff_display' => 'ca_adv_staff_display_portrait',
           ),
           'not' => FALSE,
         ),
       ),
       'logic' => 'and',
     ),
+    'name' => 'ca-adv-staff-grouped-flex-portrait',
   );
   $display = new panels_display();
-  $display->layout = 'worx_aurora';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '2f758ffa-fb52-4b35-a9d3-66f3a7dabc72';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
-    $pane->panel = 'first-first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_flex_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f6f127d8-8d37-4829-86b2-84765323b859';
-    $display->content['new-f6f127d8-8d37-4829-86b2-84765323b859'] = $pane;
-    $display->panels['first-first'][0] = 'new-f6f127d8-8d37-4829-86b2-84765323b859';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_staff_list_view__panel_context_e1901d84-d37c-49f6-8ac8-380b9ca9646c';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_staff_list_view';
-  $handler->handler = 'panel_context';
-  $handler->weight = -24;
-  $handler->conf = array(
-    'title' => 'Aurora Adv Staff: Grouped Member List Flex View Template 4',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-adv-staff-category-flex ca-adv-staff-category-flex-4',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'ca_adv_staff_c_list_template',
-          'settings' => array(
-            'ca_adv_staff_c_list_template' => 'ca_adv_staff_c_list_template_four_flex',
-          ),
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'worx_aurora_base_settings',
-          'settings' => array(
-            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'worx_aurora';
+  $display->layout = 'flexible';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -2895,8 +4983,27 @@ function ca_adv_staff_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-78e81dc4-11b7-4232-ae40-5bf73c2e15b6';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_staff_member_list_portrait-staff_grouped_member_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '78e81dc4-11b7-4232-ae40-5bf73c2e15b6';
+    $display->content['new-78e81dc4-11b7-4232-ae40-5bf73c2e15b6'] = $pane;
+    $display->panels['center'][0] = 'new-78e81dc4-11b7-4232-ae40-5bf73c2e15b6';
+    $pane = new stdClass();
     $pane->pid = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
-    $pane->panel = 'first-first';
+    $pane->panel = 'menu_';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_adv_staff_category_list-ca_adv_staff_cat_menu_list';
     $pane->shown = TRUE;
@@ -2912,26 +5019,7 @@ function ca_adv_staff_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'c2176794-7935-494a-8546-c4d4bdff0f43';
     $display->content['new-c2176794-7935-494a-8546-c4d4bdff0f43'] = $pane;
-    $display->panels['first-first'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
-    $pane = new stdClass();
-    $pane->pid = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
-    $pane->panel = 'first-second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_staff_staff_list-staff_grouped_member_flex_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
-    $display->content['new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43'] = $pane;
-    $display->panels['first-second'][0] = 'new-fc67b5fd-0eb6-4e0d-a7ac-936935bd9e43';
+    $display->panels['menu_'][0] = 'new-c2176794-7935-494a-8546-c4d4bdff0f43';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

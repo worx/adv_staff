@@ -54,37 +54,26 @@ function ca_adv_staff_settings_form() {
   );
   $form['ca_adv_staff_c_list_template'] = array(
     '#type' => 'select',
-    '#title' => t('Staff\'s Category list template'),
+    '#title' => t('Adv Staff\'s Category list template'),
     '#options' => array(
-      'ca_adv_staff_c_list_template_one' => t('Template one'),
-      'ca_adv_staff_c_list_template_two' => t('Template two'),
-      'ca_adv_staff_c_list_template_three' => t('Template three'),
-      'ca_adv_staff_c_list_template_four' => t('Template four'),
+      'ca_adv_staff_c_list_template_one' => t('Grid'),
+      'ca_adv_staff_c_list_template_one_flex' => t('Grid Flex'),
+      'ca_adv_staff_c_list_template_two' => t('Grouped Grid'),
+      'ca_adv_staff_c_list_template_two_flex' => t('Grouped Grid Flex'),
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_adv_staff_c_list_template', 'ca_adv_staff_c_list_template_one'),
   );
   $form['ca_adv_staff_m_list_template'] = array(
     '#type' => 'select',
-    '#title' => t('Staff\'s Member list template'),
+    '#title' => t('Adv Staff\'s Member list template'),
     '#options' => array(
-      'ca_adv_staff_m_list_template_one' => t('Template one'),
-      'ca_adv_staff_m_list_template_two' => t('Template two'),
-      'ca_adv_staff_m_list_template_three' => t('Template three'),
-      'ca_adv_staff_m_list_template_four' => t('Template four'),
+      'ca_adv_staff_m_list_template_one' => t('Grid'),
+      'ca_adv_staff_m_list_template_one_flex' => t('Grid Flex'),
+      'ca_adv_staff_m_list_template_two' => t('List'),
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_adv_staff_m_list_template', 'ca_adv_staff_m_list_template_one'),
-  );
-  $form['ca_adv_staff_node_template'] = array(
-    '#type' => 'select',
-    '#title' => t('Staff\'s Node template'),
-    '#options' => array(
-      'ca_adv_staff_node_template_one' => t('Template one'),
-      'ca_adv_staff_node_template_two' => t('Template two'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_adv_staff_node_template', 'ca_adv_staff_node_template_one'),
   );
   $form['actions'] = array(
     '#type' => 'actions',

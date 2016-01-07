@@ -10,7 +10,7 @@
 function ca_adv_staff_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ca_adv_staff_c_photo'
+  // Exported field_base: 'field_ca_adv_staff_c_photo'.
   $field_bases['field_ca_adv_staff_c_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function ca_adv_staff_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_adv_staff_m_category'
+  // Exported field_base: 'field_ca_adv_staff_m_category'.
   $field_bases['field_ca_adv_staff_m_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -63,7 +63,7 @@ function ca_adv_staff_field_default_field_bases() {
     'type' => 'node_reference',
   );
 
-  // Exported field_base: 'field_ca_adv_staff_m_photo'
+  // Exported field_base: 'field_ca_adv_staff_m_photo'.
   $field_bases['field_ca_adv_staff_m_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -85,7 +85,7 @@ function ca_adv_staff_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_adv_staff_m_title'
+  // Exported field_base: 'field_ca_adv_staff_m_title'.
   $field_bases['field_ca_adv_staff_m_title'] = array(
     'active' => 1,
     'cardinality' => 1,
